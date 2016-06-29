@@ -28,7 +28,8 @@
   "license": "MIT",
   "main": "lib/index.js",
   "bin": {
-    "packetloop-node-clean-shrinkwrap": "lib/bin.js"
+    "packetloop-node-clean-shrinkwrap": "lib/bin.js",
+    "packetloop-node-clean-shrinkwrap-production": "cleanShrinkwrap.sh"
   },
   "repository": {
     "type": "git",
