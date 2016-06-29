@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "packetloop-node-clean-shrinkwrap",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Nik Butenko",
     "email": "nik@butenko.me",
@@ -46,8 +46,7 @@
   "engines": {
     "node": "6"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6",
     "babel-preset-es2015-node6": "^0.2",
