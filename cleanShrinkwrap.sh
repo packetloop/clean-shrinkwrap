@@ -16,5 +16,5 @@ npm shrinkwrap
 
 cd ${SRC}
 cp /tmp/${PKG}/npm-shrinkwrap.json ${SRC}/npm-shrinkwrap.json
-#node lib/bin.js
+node lib/bin.js
 rm -rf /tmp/${PKG}
