@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "packetloop-node-clean-shrinkwrap",
+  "version": "0.0.0",
+  "author": {
+    "name": "Nik Butenko",
+    "email": "nik@butenko.me",
+    "url": "https://twitter.com/nkbtnk"
+  },
+  "bugs": {
+    "url": "https://github.com/packetloop/node-clean-shrinkwrap/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nik Butenko",
+      "email": "nik@butenko.me",
+      "url": "https://twitter.com/nkbtnk"
+    }
+  ],
+  "description": "Packetloop's shell script to cleanup npm-shrinkwrap.json to be always consistent for each run of npm shrinkwrap and minimize git diffs",
+  "homepage": "https://github.com/packetloop/node-clean-shrinkwrap",
+  "keywords": [
+    "packetloop",
+    "javascript",
+    "shrinkwrap",
+    "clean shrinkwrap"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "packetloop-node-clean-shrinkwrap": "lib/bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packetloop/node-clean-shrinkwrap.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "eslint .",
+    "pretest": "npm run build -s",
+    "test": "./test/cleanShrinkwrap.sh",
+    "postversion": "git push --follow-tags",
+    "prepublish": "npm run build -s"
+  },
+  "engines": {
+    "node": "6"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6",
+    "babel-preset-es2015-node6": "^0.2",
+    "eslint": "^2",
+    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop",
+    "tape": "^4"
+  },
+  "peerDependencies": {}
+}
