@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+SCRIPT_DIR=$(dirname $0)
 SRC=$(pwd)
 PKG=$(node -e 'console.log(require("./package.json").name)')
 
@@ -16,5 +17,10 @@ npm shrinkwrap
 
 cd ${SRC}
 cp /tmp/${PKG}/npm-shrinkwrap.json ${SRC}/npm-shrinkwrap.json
-node lib/bin.js
+if [ -e "./${SCRIPT_DIR}/lib/bin.js" ]
+then
+  node ./${SCRIPT_DIR}/lib/bin.js
+else
+  $(npm bin)/packetloop-node-clean-shrinkwrap
+fi
 rm -rf /tmp/${PKG}
