@@ -1,6 +1,6 @@
 {
   "name": "@packetloop/node-clean-shrinkwrap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "registry": "https://api.bintray.com/npm/arbornetworks/packetloop"
   },
@@ -18,7 +18,6 @@
     "postversion": "git push --follow-tags",
     "prepublish": "npm run build -s"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/packetloop/node-clean-shrinkwrap.git"
