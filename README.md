@@ -4,7 +4,7 @@ Script to cleanup npm-shrinkwrap.json to be always consistent for each run of np
 ## Installation
 
 ```sh
-npm install --global packetloop/node-clean-shrinkwrap
+npm install --global @packetloop/node-clean-shrinkwrap
 ```
 
 ## Usage
