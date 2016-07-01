@@ -4,7 +4,7 @@ const sorted = input =>
     .reduce((memo, key) => Object.assign(memo, {[key]: input[key]}), {});
 
 
-export const cleanShrinkwrap = module => {
+export const cleanShrinkwrap = (module, name) => {
   const mod = {};
   if (module.name) {
     mod.name = module.name;
@@ -17,9 +17,13 @@ export const cleanShrinkwrap = module => {
     mod.resolved = module.resolved;
   }
 
+  if (name && name.indexOf('@') > -1 && mod.from) {
+    mod.from = `${name}@${mod.version}`;
+  }
+
   if (typeof module.dependencies === 'object') {
     mod.dependencies = Object.keys(sorted(module.dependencies)).reduce((memo, key) =>
-      Object.assign(memo, {[key]: cleanShrinkwrap(module.dependencies[key])}), {});
+      Object.assign(memo, {[key]: cleanShrinkwrap(module.dependencies[key], key)}), {});
   }
 
   return mod;

@@ -2,6 +2,11 @@
   "name": "packetloop-node-clean-shrinkwrap",
   "version": "1.0.0",
   "dependencies": {
+    "@packetloop/node-pretty-log": {
+      "version": "1.0.1",
+      "from": "@packetloop/node-pretty-log@>=1.0.0 <2.0.0",
+      "resolved": "http://dl.bintray.com//arbornetworks/packetloop/@packetloop/node-pretty-log/-/@packetloop/node-pretty-log-1.0.1.tgz"
+    },
     "balanced-match": {
       "version": "0.4.1",
       "from": "balanced-match@>=0.4.1 <0.5.0",
